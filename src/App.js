@@ -27,7 +27,8 @@ function App() {
     <nav className='navbar p-4 bg-indigo'>
       <div className='container-fluid'><h1 className='text-white'>TodoList</h1></div> 
     </nav>
-    <TodoList todos={todoList} addlist={add} addHistory={addHist}/>
+    <div className='m-4 p-4 border border-3 rounded-3'><TodoList todos={todoList} addlist={add} addHistory={addHist}/></div>
+    
     <hr/>
     <nav className='navbar p-4 bg-indigo-dark'>
       <div className='container-fluid'><h1 className='text-white'>Tasks Completed</h1>
@@ -36,8 +37,7 @@ function App() {
       </form>
       </div> 
     </nav>
-    <DidList didList={didList}/>
-    
+    <div className='m-4 p-4 border border-3 rounded-3'><DidList didList={didList}/></div>
     </>
   );
 }
