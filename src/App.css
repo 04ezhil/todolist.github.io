@@ -4,3 +4,11 @@
   .bg-indigo-dark{
     background-color: rgb(28, 54, 82);
   }
+
+  .text-indigo{
+    color: rgb(174, 47, 21);
+    font-size-adjust: inherit;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    font-style: italic;
+  }

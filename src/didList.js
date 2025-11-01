@@ -10,12 +10,12 @@ function DidList({ didList }) {
                         <li key={index} className='card mt-2'>
                             <div className='card-body'>
                                 <div className='d-flex justify-content-between align-items-center'>
-                                    <p className='card-title'>{list}</p>
+                                    <p className='card-title' >{list}</p>
                                 </div>
                             </div>
                         </li>
                     );
-                }) :  <h2 className='mt-3 p-3' style={{ color: 'red'  , border:'2px solid indigo'}}>Empty List</h2>}
+                }) :  <h2 className='mt-3 p-3' style={{ color: 'red'  ,fontFamily:'Tangerine',fontWeight:'bold',fontSize:'50px'}}>No tasks have been completed.</h2>}
             </ol>
         </>
     );
