@@ -1,0 +1,23 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
+function DidList({ didList }) {
+    return (
+        <>
+            <ol>
+                {didList.length > 0 ? didList.map((list, index) => {
+                    return (
+                        <li key={index} className='card mt-2'>
+                            <div className='card-body'>
+                                <div className='d-flex justify-content-between align-items-center'>
+                                    <p className='card-title'>{list}</p>
+                                </div>
+                            </div>
+                        </li>
+                    );
+                }) :  <h2 className='mt-3 p-3' style={{ color: 'red'  , border:'2px solid indigo'}}>Empty List</h2>}
+            </ol>
+        </>
+    );
+}
+export default DidList;
