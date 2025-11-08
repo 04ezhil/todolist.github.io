@@ -10,7 +10,7 @@ function DidList({ didList }) {
                         <li key={index} className='card mt-2'>
                             <div className='card-body'>
                                 <div className='d-flex justify-content-between align-items-center'>
-                                    <p className='card-title' >{list}</p>
+                                    <p className='card-title text-indigo' >{list}</p>
                                 </div>
                             </div>
                         </li>

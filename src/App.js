@@ -1,13 +1,13 @@
 
 import './App.css';
 import './todoList.js';
-import './didList.js';
 import TodoList from './todoList.js';
-import DidList from './didList.js';
 import { useState } from 'react';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import DidList from './didList.js';
+
+
 function App() {
   var list = ['wake up early','Do excersize'];
   let [todoList,setTodoList] = useState([]);
@@ -15,10 +15,24 @@ function App() {
   
 
   let add = (what) => {
+    what = what.trim();
+    if(what==="") return;
     setTodoList([...todoList,what]);
   }
+  let remove = (item)=>{
+    setTodoList(todoList.filter((i) => i !== item));
+  }
+  let editList = (itemTobeRemoved , itemTobeAdded) => {
+    itemTobeAdded = itemTobeAdded.trim();
+    if(itemTobeAdded==="") return;
+     let ind = todoList.findIndex((i) => i === itemTobeRemoved);
+      let newList = [...todoList];
+      newList.splice(ind,1);
+      newList.splice(ind,0,itemTobeAdded);
+      setTodoList(newList);
+  }
   let addHist =(did) => {
-    setTodoList(todoList.filter((i) => i !== did));
+    remove(did);
     setDidList([...didList,did]);
   }
 
@@ -27,7 +41,7 @@ function App() {
     <nav className='navbar p-4 bg-indigo'>
       <div className='container-fluid'><h1 className='text-white'>TodoList</h1></div> 
     </nav>
-    <div className='m-4 p-4 border border-3 rounded-3'><TodoList todos={todoList} addlist={add} addHistory={addHist}/></div>
+    <div className='m-4 p-4 border border-3 rounded-3'><TodoList todos={todoList} addlist={add} addHistory={addHist} deleteItem={remove} editItem={editList}/></div>
     
     <hr/>
     <nav className='navbar p-4 bg-indigo-dark'>
