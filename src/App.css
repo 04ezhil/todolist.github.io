@@ -1,9 +1,17 @@
 .bg-indigo{
-    background-color: indigo;
-  }
-  .bg-indigo-dark{
-    background-color: rgb(28, 54, 82);
-  }
+  background-color: indigo;
+}
+.bg-indigo-dark{
+  background-color: rgb(28, 54, 82);
+}
+ .input-text-box{
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+ }
 
   .text-indigo{
     color: rgb(174, 47, 21);
