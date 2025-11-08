@@ -40,7 +40,7 @@ function TodoList({ todos, addlist,addHistory}) {
           <Modal.Title>Task to be done</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <input type='text' className='ms-auto' onChange={handleChange}></input>
+          <input type='text' className='ms-auto input-text-box' onChange={handleChange}></input>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
